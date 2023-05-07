@@ -6,5 +6,5 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://bbg-blog.vercel.app',
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap(), tailwind()],
 });
