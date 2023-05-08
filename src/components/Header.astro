@@ -1,19 +1,30 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+
+const links = [
+  {
+    href: '/blog',
+    text: 'Blog',
+  },
+  {
+    href: '/about',
+    text: 'About',
+  },
+];
 ---
 
 <header class="flex justify-center w-full p-6">
   <div class="max-w-4xl w-full">
     <nav
-      class="flex items-center justify-between w-full border-b-2 border-blue-300 mb-10">
-      <h2 class="">
+      class="flex items-center justify-between w-full border-b-[1px] border-blue-300 pb-4 mb-10">
+      <a href="/">
         {SITE_TITLE}
-      </h2>
+      </a>
       <!-- Desktop Navigation -->
       <nav class="hidden sm:block space-x-4">
-        <HeaderLink href="/">Home</HeaderLink>
-        <HeaderLink href="/blog">Blog</HeaderLink>
+        <HeaderLink href="/articles">Articles</HeaderLink>
+        <HeaderLink href="/projects">Projects</HeaderLink>
         <HeaderLink href="/about">About</HeaderLink>
         <HeaderLink href="https://github.com/brian-gee" target="_blank">
           GitHub
