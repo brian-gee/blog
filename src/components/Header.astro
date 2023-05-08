@@ -4,10 +4,10 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header>
-  <h2 class="font-bold text-lg">
-    {SITE_TITLE}
-  </h2>
-  <nav>
+  <nav class="flex space-x-10 items-center border-b-2 border-blue-300">
+    <h2 class="font-bold text-lg">
+      {SITE_TITLE}
+    </h2>
     <HeaderLink href="/">Home</HeaderLink>
     <HeaderLink href="/blog">Blog</HeaderLink>
     <HeaderLink href="/about">About</HeaderLink>
