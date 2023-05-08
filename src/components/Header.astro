@@ -3,16 +3,22 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header class="flex justify-center">
-  <nav class="flex space-x-10 items-center border-b-2 border-blue-300 mb-10">
-    <h2 class="font-bold text-lg">
-      {SITE_TITLE}
-    </h2>
-    <HeaderLink href="/">Home</HeaderLink>
-    <HeaderLink href="/blog">Blog</HeaderLink>
-    <HeaderLink href="/about">About</HeaderLink>
-    <HeaderLink href="https://github.com/brian-gee" target="_blank">
-      GitHub
-    </HeaderLink>
-  </nav>
+<header class="flex justify-center w-full p-6">
+  <div class="max-w-4xl w-full">
+    <nav
+      class="flex items-center justify-between w-full border-b-2 border-blue-300 mb-10">
+      <h2 class="">
+        {SITE_TITLE}
+      </h2>
+      <!-- Desktop Navigation -->
+      <nav class="hidden sm:block space-x-4">
+        <HeaderLink href="/">Home</HeaderLink>
+        <HeaderLink href="/blog">Blog</HeaderLink>
+        <HeaderLink href="/about">About</HeaderLink>
+        <HeaderLink href="https://github.com/brian-gee" target="_blank">
+          GitHub
+        </HeaderLink>
+      </nav>
+    </nav>
+  </div>
 </header>
