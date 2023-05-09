@@ -19,4 +19,15 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-.vercel
+
+# Firebase cache
+.firebase/
+
+# Firebase config
+firebase.json
+
+# Firebase Hosting Generated
+.firebase/hosting.*
+
+# Firebase functions
+functions/
