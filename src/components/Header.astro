@@ -1,6 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+import { Icon } from 'astro-icon';
 
 const links = [
   {
@@ -47,25 +48,19 @@ const links = [
         </nav>
         <!-- Mobile Navigation -->
         <div>
-          <svg
+          <Icon
             @click="open = !open"
             class="h-6 w-6 fill-current sm:hidden hover:cursor-pointer"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            x-show="!open">
-            <path
-              fill-rule="evenodd"
-              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-            ></path>
-          </svg>
-          <svg
+            x-show="!open"
+            name="ic:outline-menu"
+          />
+
+          <Icon
             @click="open = !open"
             class="h-6 w-6 fill-current sm:hidden hover:cursor-pointer"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            x-show="open">
-            <path fill-rule="evenodd" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
+            x-show="open"
+            name="ic:outline-close"
+          />
           <!-- Menu -->
           <nav
             x-show="open"
