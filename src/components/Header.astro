@@ -23,7 +23,10 @@ const links = [
 ];
 ---
 
-<header class="flex justify-center w-full p-6">
+<header
+  class="flex justify-center w-full p-6"
+  x-data="{ open: false }"
+  :class="{ 'pb-64': open }">
   <div class="max-w-4xl w-full">
     <nav
       class="relative flex items-center justify-between w-full border-b-[1px] border-blue-300 pb-4 mb-10">
@@ -43,22 +46,31 @@ const links = [
           }
         </nav>
         <!-- Mobile Navigation -->
-        <div x-data="{ open: false }">
+        <div>
           <svg
             @click="open = !open"
             class="h-6 w-6 fill-current sm:hidden hover:cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24">
+            viewBox="0 0 24 24"
+            x-show="!open">
             <path
               fill-rule="evenodd"
               d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
             ></path>
           </svg>
+          <svg
+            @click="open = !open"
+            class="h-6 w-6 fill-current sm:hidden hover:cursor-pointer"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            x-show="open">
+            <path fill-rule="evenodd" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
           <!-- Menu -->
           <nav
             x-show="open"
             @click.away="open = false"
-            class="absolute top-full left-0 w-full bg-white sm:hidden"
+            class="absolute top-full left-0 w-full bg-white sm:hidden border-y-[1px] border-blue-300"
             style="z-index: 1000;">
             <div class="pt-5 pb-4 overflow-y-auto">
               <div class="px-2 space-y-1">
