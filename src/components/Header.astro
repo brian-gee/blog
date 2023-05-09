@@ -17,7 +17,7 @@ const links = [
 <header class="flex justify-center w-full p-6">
   <div class="max-w-4xl w-full">
     <nav
-      class="flex items-center justify-between w-full border-b-[1px] border-blue-300 pb-4 mb-10">
+      class="relative flex items-center justify-between w-full border-b-[1px] border-blue-300 pb-4 mb-10">
       <a href="/">
         {SITE_TITLE}
       </a>
@@ -30,6 +30,45 @@ const links = [
           GitHub
         </HeaderLink>
       </nav>
+      <!-- Mobile Navigation -->
+      <div x-data="{ open: false }">
+        <svg
+          @click="open = !open"
+          class="h-6 w-6 fill-current sm:hidden hover:cursor-pointer"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24">
+          <path
+            fill-rule="evenodd"
+            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+          ></path>
+        </svg>
+        <!-- Menu -->
+        <nav
+          x-show="open"
+          @click.away="open = false"
+          class="absolute top-full left-0 w-full bg-white sm:hidden"
+          style="z-index: 1000;">
+          <div class="pt-5 pb-4 overflow-y-auto">
+            <div class="px-2 space-y-1">
+              <HeaderLink href="/articles" class="block text-center">
+                Articles
+              </HeaderLink>
+              <HeaderLink href="/projects" class="block text-center">
+                Projects
+              </HeaderLink>
+              <HeaderLink href="/about" class="block text-center">
+                About
+              </HeaderLink>
+              <HeaderLink
+                href="https://github.com/brian-gee"
+                target="_blank"
+                class="block text-center">
+                GitHub
+              </HeaderLink>
+            </div>
+          </div>
+        </nav>
+      </div>
     </nav>
   </div>
 </header>
