@@ -20,14 +20,19 @@ const links = [
 
 const iconLinks = [
   {
+    text: 'Bookshelf',
+    name: 'mdi:bookshelf',
+    href: '/bookshelf',
+  },
+  {
     text: 'Github',
     name: 'mdi:github-face',
     href: 'https://github.com/brian-gee',
   },
   {
-    text: 'Bookshelf',
-    name: 'mdi:bookshelf',
-    href: '/bookshelf',
+    text: 'Email',
+    name: 'mdi:email',
+    href: 'mailto:briangeertsma@gmail.com',
   },
 ];
 ---
@@ -45,21 +50,25 @@ const iconLinks = [
       <!-- Navigation -->
       <div>
         <!-- Desktop Navigation -->
-        <nav class="hidden sm:block space-x-2">
-          {
-            links.map((link) => (
-              <HeaderLink href={link.href} target={link.target}>
-                {link.text}
-              </HeaderLink>
-            ))
-          }
-          {
-            iconLinks.map((link) => (
-              <a href={link.href} target="_blank" rel="noopener noreferrer">
-                <Icon name={link.name} class="w-6 h-6 inline" />
-              </a>
-            ))
-          }
+        <nav class="hidden sm:block">
+          <div class="inline pr-6 space-x-4">
+            {
+              links.map((link) => (
+                <HeaderLink href={link.href} target={link.target}>
+                  {link.text}
+                </HeaderLink>
+              ))
+            }
+          </div>
+          <div class="inline space-x-2">
+            {
+              iconLinks.map((link) => (
+                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  <Icon name={link.name} class="w-6 h-6 inline" />
+                </a>
+              ))
+            }
+          </div>
         </nav>
         <!-- Mobile Navigation -->
         <div>
