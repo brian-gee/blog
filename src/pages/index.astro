@@ -2,9 +2,13 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import Hero from '../components/Hero.astro';
 import RecentPosts from '../components/RecentPosts.astro';
+import Newsletter from '../components/Newsletter.astro';
 ---
 
 <DefaultLayout title="Home">
-  <Hero />
-  <RecentPosts />
+  <div class="space-y-32">
+    <Hero />
+    <RecentPosts />
+    <Newsletter />
+  </div>
 </DefaultLayout>
