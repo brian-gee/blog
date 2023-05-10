@@ -40,7 +40,7 @@ const iconLinks = [
 <header
   class="flex justify-center w-full p-6"
   x-data="{ open: false }"
-  :class="{ 'pb-64': open }">
+  :class="{ 'pb-32': open }">
   <div class="max-w-4xl w-full">
     <nav
       class="relative flex items-center justify-between w-full border-b-[1px] border-blue-300 pb-4 mb-10">
@@ -89,8 +89,7 @@ const iconLinks = [
           <nav
             x-show="open"
             @click.away="open = false"
-            class="absolute top-full left-0 w-full sm:hidden border-y-[1px] border-blue-300"
-            style="z-index: 1000;">
+            class="absolute top-full left-0 w-full sm:hidden border-y-[1px] border-blue-300">
             <div class="pt-5 pb-4 overflow-y-auto">
               <div class="px-2 space-y-1">
                 {
