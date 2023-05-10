@@ -16,11 +16,18 @@ const links = [
     text: 'About',
     href: '/about',
   },
+];
+
+const iconLinks = [
   {
-    text: 'GitHub',
-    icon: 'ic:outline-github',
+    text: 'Github',
+    name: 'mdi:github-face',
     href: 'https://github.com/brian-gee',
-    target: '_blank',
+  },
+  {
+    text: 'Bookshelf',
+    name: 'mdi:bookshelf',
+    href: '/bookshelf',
   },
 ];
 ---
@@ -38,12 +45,19 @@ const links = [
       <!-- Navigation -->
       <div>
         <!-- Desktop Navigation -->
-        <nav class="hidden sm:block space-x-4">
+        <nav class="hidden sm:block space-x-2">
           {
             links.map((link) => (
               <HeaderLink href={link.href} target={link.target}>
                 {link.text}
               </HeaderLink>
+            ))
+          }
+          {
+            iconLinks.map((link) => (
+              <a href={link.href} target="_blank" rel="noopener noreferrer">
+                <Icon name={link.name} class="w-6 h-6 inline" />
+              </a>
             ))
           }
         </nav>
@@ -66,7 +80,7 @@ const links = [
           <nav
             x-show="open"
             @click.away="open = false"
-            class="absolute top-full left-0 w-full bg-white sm:hidden border-y-[1px] border-blue-300"
+            class="absolute top-full left-0 w-full sm:hidden border-y-[1px] border-blue-300"
             style="z-index: 1000;">
             <div class="pt-5 pb-4 overflow-y-auto">
               <div class="px-2 space-y-1">
@@ -81,6 +95,18 @@ const links = [
                     </HeaderLink>
                   ))
                 }
+                <div class="flex justify-center pt-2 space-x-2">
+                  {
+                    iconLinks.map((link) => (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <Icon name={link.name} class="w-6 h-6 inline " />
+                      </a>
+                    ))
+                  }
+                </div>
               </div>
             </div>
           </nav>
