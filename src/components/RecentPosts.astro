@@ -7,7 +7,7 @@ const posts = (await getCollection('blog'))
   .slice(0, 3);
 ---
 
-<section class="grid gap-2">
+<section class="grid gap-2 pt-20 sm:pt-28">
   <h1 class="text-xl font-bold">Featured & Recent Articles</h1>
   {
     posts.map((post) => (
