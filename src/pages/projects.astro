@@ -1,0 +1,45 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+const projects = [
+  {
+    name: 'simple-balance',
+    url: 'https://github.com/brian-gee/simple-balance',
+    description: 'A simple balance app built with Swift',
+    languages: ['Swift'],
+    role: 'author',
+  },
+  {
+    name: 'astro-portfolio',
+    url: 'https://github.com/brian-gee/astro-portfolio',
+    description: 'My personal portfolio site built with Astro',
+    languages: ['Astro, TailwindCSS, TypeScript'],
+    role: 'author',
+  },
+  {
+    name: 'sk-clean',
+    url: 'https://github.com/brian-gee/sk-clean',
+    description: 'Landing page for a local pool cleaning business',
+    languages: ['React, DaisyUI, TailwindCSS, TypeScript'],
+    role: 'author',
+  },
+];
+---
+
+<DefaultLayout title="Projects">
+  <div class="grid gap-10 mx-auto max-w-xl xl:max-w-4xl mt-12">
+    <ul class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+      {
+        projects.map((project) => (
+          <ProjectCard
+            name={project.name}
+            description={project.description}
+            role={project.role}
+            url={project.url}
+            languages={project.languages}
+          />
+        ))
+      }
+    </ul>
+  </div>
+</DefaultLayout>
