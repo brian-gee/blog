@@ -1,0 +1,44 @@
+---
+import Badge from '../components/Badge.astro';
+
+interface Props {
+  title: string;
+  img: string;
+  author: string;
+  year: number;
+  comment: string;
+  reading?: boolean;
+  loading?: 'lazy' | 'eager';
+}
+const {
+  title,
+  img,
+  author,
+  comment,
+  year,
+  reading = false,
+  loading = 'lazy',
+} = Astro.props;
+---
+
+<li class="list-none w-full">
+  <article class="flex gap-10">
+    <div class="overflow-hidden rounded-lg">
+      <img src={img} alt={title} />
+    </div>
+    <div class="w-full pt-6">
+      <h2 class="mb-1 space-x-2 text-xl font-semibold text-black">
+        {title}
+      </h2>
+      <div class="mb-2 flex flex-col gap-2">
+        <p class="space-x-0.5 text-sm">
+          <span>{author}</span>{' '}
+          <span>&middot;</span>
+          <span>{year}</span>
+        </p>
+        {reading && <Badge text="reading" color="indigo" />}
+      </div>
+      <p class="py-1 text-black leading-relaxed">{`"${comment}"`}</p>
+    </div>
+  </article>
+</li>
