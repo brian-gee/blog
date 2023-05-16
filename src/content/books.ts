@@ -6,25 +6,36 @@ import youreTooGood from '../content/books/youre-too-good.jpg';
 import keepGoing from '../content/books/keep-going.jpeg';
 import bigThinking from '../content/books/the-magic-of-thinking-big.jpeg';
 import cheese from '../content/books/who-moved-my-cheese.jpeg';
+import fourThousand from '../content/books/four-thousand-weeks.jpeg';
+import alchemist from '../content/books/alchemist.jpeg';
 
 export const books = [
+  {
+    title: 'The Alchemist',
+    author: 'Paulo Coelho',
+    comment: 'A great story about following your dreams.',
+    img: alchemist,
+    year: 1988,
+    reading: true,
+    loading: 'eager',
+  },
+  {
+    title: 'Four Thousand Weeks: Time Management for Mortals',
+    author: 'Oliver Burkeman',
+    comment:
+      "Advocates embracing life's brevity to cultivate meaning rather than attempting to do everything.",
+    img: fourThousand,
+    year: 2021,
+    reading: true,
+    loading: 'eager',
+  },
   {
     title: 'Who Moved My Cheese?',
     author: 'Spencer Johnson',
     comment: 'A short guide to dealing with change.',
     img: cheese,
     year: 1999,
-    reading: true,
-    loading: 'eager',
-  },
-  {
-    title: 'The Magic of Thinking Big',
-    author: 'David J. Schwartz',
-    comment:
-      'How to use the power of thinking big to achieve your goals and live a happier life.',
-    img: bigThinking,
-    year: 1959,
-    reading: true,
+    reading: false,
     loading: 'eager',
   },
   {
@@ -77,8 +88,7 @@ export const books = [
     loading: 'eager',
   },
   {
-    title:
-      'How to Be an Imperfectionist: The New Way to Fearlessness, Confidence, and Freedom from Perfectionism',
+    title: 'How to Be an Imperfectionist',
     author: 'Stephen Guise',
     comment:
       'Strategies for overcoming the negative impact of perfectionism, including fear and anxiety.',
