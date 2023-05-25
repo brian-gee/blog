@@ -17,6 +17,7 @@ export const books = [
     img: alchemist,
     year: 1988,
     reading: true,
+    link: 'https://www.amazon.com/Alchemist-Paulo-Coelho/dp/0062315005/ref=sr_1_1?crid=783KBVNBJN1O&amp;keywords=the+alchemist&amp;qid=1684985085&amp;sprefix=the+alchemist%252Caps%252C113&amp;sr=8-1&_encoding=UTF8&tag=briangee0c-20&linkCode=ur2&linkId=38e3f9d5de35fd2090f403235128a243&camp=1789&creative=9325',
     loading: 'eager',
   },
   {
