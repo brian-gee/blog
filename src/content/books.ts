@@ -28,6 +28,7 @@ export const books = [
     img: fourThousand,
     year: 2021,
     reading: true,
+    link: '',
     loading: 'eager',
   },
   {
@@ -37,6 +38,7 @@ export const books = [
     img: cheese,
     year: 1999,
     reading: false,
+    link: 'https://www.amazon.com/Who-Moved-My-Cheese-Amazing/dp/0399144463/ref=sr_1_3?keywords=who+moved+my+cheese&amp;qid=1685413309&amp;sprefix=who+moved+my+%252Caps%252C113&amp;sr=8-3&_encoding=UTF8&tag=briangee0c-20&linkCode=ur2&linkId=910b279b214d7a1428195813cb59217e&camp=1789&creative=9325',
     loading: 'eager',
   },
   {
