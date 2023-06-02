@@ -6,7 +6,6 @@ interface Props {
   img: string;
   author: string;
   year: number;
-  comment: string;
   reading?: boolean;
   link: string;
   loading?: 'lazy' | 'eager';
@@ -15,7 +14,6 @@ const {
   title,
   img,
   author,
-  comment,
   year,
   reading = false,
   link,
@@ -41,7 +39,6 @@ const {
           </p>
           {reading && <Badge text="reading" color="indigo" />}
         </div>
-        <p class="py-1 leading-relaxed">{`"${comment}"`}</p>
       </div>
     </article>
   </a>

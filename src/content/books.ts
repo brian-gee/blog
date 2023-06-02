@@ -13,7 +13,6 @@ export const books = [
   {
     title: 'The Alchemist',
     author: 'Paulo Coelho',
-    comment: 'A great story about following your dreams.',
     img: alchemist,
     year: 1988,
     reading: true,
@@ -23,8 +22,6 @@ export const books = [
   {
     title: 'Four Thousand Weeks: Time Management for Mortals',
     author: 'Oliver Burkeman',
-    comment:
-      "Advocates embracing life's brevity to cultivate meaning rather than attempting to do everything.",
     img: fourThousand,
     year: 2021,
     reading: true,
@@ -34,7 +31,6 @@ export const books = [
   {
     title: 'Who Moved My Cheese?',
     author: 'Spencer Johnson',
-    comment: 'A short guide to dealing with change.',
     img: cheese,
     year: 1999,
     reading: false,
@@ -44,8 +40,6 @@ export const books = [
   {
     title: 'Keep Going: 10 Ways to Stay Creative in Good Times and Bad',
     author: 'Austin Kleon',
-    comment:
-      'A great book on how to stay creative and productive in the face of adversity.',
     img: keepGoing,
     year: 2019,
     reading: false,
@@ -54,8 +48,6 @@ export const books = [
   {
     title: "You're Too Good to Feel This Bad",
     author: 'Nate Dallas',
-    comment:
-      'Great explanation of why habits are so important and how to turn small actions into big results.',
     img: youreTooGood,
     year: 2020,
     reading: false,
@@ -64,8 +56,6 @@ export const books = [
   {
     title: 'Mini Habits',
     author: 'Stephen Guise',
-    comment:
-      'Great explanation of why habits are so important and how to turn small actions into big results.',
     img: miniHabits,
     year: 2013,
     reading: false,
@@ -74,8 +64,6 @@ export const books = [
   {
     title: 'How to Win Friends and Influence People',
     author: 'Dale Carnegie',
-    comment:
-      'Practical advice on how to improve your social skills and relationships.',
     img: howToWinFriends,
     year: 1936,
     reading: false,
@@ -84,7 +72,6 @@ export const books = [
   {
     title: 'Soundtracks: The Surprising Solution to Overthinking',
     author: 'Jon Acuff',
-    comment: 'A guide to overcoming the negative soundtracks within our minds.',
     img: soundtracks,
     year: 2021,
     reading: false,
@@ -93,8 +80,6 @@ export const books = [
   {
     title: 'How to Be an Imperfectionist',
     author: 'Stephen Guise',
-    comment:
-      'Strategies for overcoming the negative impact of perfectionism, including fear and anxiety.',
     img: howToBeAnImperfectionist,
     year: 2015,
     reading: false,
