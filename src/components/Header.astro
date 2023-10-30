@@ -3,7 +3,14 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 import { Icon } from 'astro-icon';
 
-const links = [
+type Link = {
+  text: string;
+  href: string;
+  name?: string;
+  target?: string;
+};
+
+const links: Link[] = [
   {
     text: 'Articles',
     href: '/articles',
@@ -18,16 +25,18 @@ const links = [
   },
 ];
 
-const iconLinks = [
+const iconLinks: Link[] = [
   {
     text: 'Bookshelf',
     name: 'mdi:bookshelf',
     href: '/bookshelf',
+    target: '_self', // This link has a 'target' property
   },
   {
     text: 'Github',
     name: 'mdi:github-face',
     href: 'https://github.com/brian-gee',
+    target: '_blank', // This link has a 'target' property
   },
   {
     text: 'Email',
@@ -54,16 +63,17 @@ const iconLinks = [
           <div class="inline pr-6 space-x-4">
             {
               links.map((link) => (
-                <HeaderLink href={link.href} target={link.target}>
-                  {link.text}
-                </HeaderLink>
+                <HeaderLink href={link.href}>{link.text}</HeaderLink>
               ))
             }
           </div>
           <div class="inline space-x-2">
             {
               iconLinks.map((link) => (
-                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={link.href}
+                  target={link.target}
+                  rel="noopener noreferrer">
                   <Icon name={link.name} class="w-6 h-6 inline" />
                 </a>
               ))
