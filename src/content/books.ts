@@ -20,7 +20,17 @@ import you from '../content/books/you.jpg';
 import hiddenBodies from '../content/books/hidden-bodies.jpg';
 import navalRavikant from '../content/books/naval-ravikant.jpg';
 
-export const books = [
+type Book = {
+  title: string;
+  author: string;
+  img: string;
+  year: number;
+  reading: boolean;
+  link: string;
+  loading: string;
+};
+
+export const books: Book[] = [
   {
     title: 'The Almanack of Naval Ravikant: A Guide to Wealth and Happiness',
     author: 'Eric Jorgenson',
