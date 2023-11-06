@@ -2,6 +2,8 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import BookCard from '../components/BookCard.astro';
 import { books } from '../content/books';
+
+export const prerender = false;
 ---
 
 <DefaultLayout title="Bookshelf">
