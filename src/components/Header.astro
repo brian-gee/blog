@@ -118,7 +118,7 @@ const iconLinks: Link[] = [
                     iconLinks.map((link) => (
                       <a
                         href={link.href}
-                        target="_blank"
+                        target={link.target}
                         rel="noopener noreferrer">
                         <Icon name={link.name} class="w-6 h-6 inline " />
                       </a>
