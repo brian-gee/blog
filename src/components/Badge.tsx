@@ -1,9 +1,3 @@
----
-interface Props {
-  text: string;
-  color: keyof typeof colors | string;
-}
-const { text, color } = Astro.props;
 const colors = {
   blue: 'bg-blue-700 text-blue-200',
   red: 'bg-red-700 text-red-200',
@@ -12,12 +6,19 @@ const colors = {
   yellow: 'bg-yellow-700 text-yellow-200',
   purple: 'bg-purple-700 text-purple-200',
   pink: 'bg-pink-700 text-pink-200',
-  'gradient-indigo': 'bg-gradient-to-r from-blue-600 to-purple-600 text-white ',
+  'gradient-indigo': 'bg-gradient-to-r from-blue-600 to-purple-600 text-white',
   'gradient-pink': 'bg-gradient-to-r from-fuchsia-600 to-pink-600 text-white',
 };
----
 
-<span
-  class={`${colors[color]} max-w-max inline-block rounded-full px-2 py-0.5 text-xs font-bold uppercase tracking-normal sm:mt-0`}>
-  {text}
-</span>
+const Badge = ({ text, color }) => {
+  const badgeColor = colors[color] || color;
+
+  return (
+    <span
+      className={`${badgeColor} max-w-max inline-block rounded-full px-2 py-0.5 text-xs font-bold uppercase tracking-normal sm:mt-0`}>
+      {text}
+    </span>
+  );
+};
+
+export default Badge;

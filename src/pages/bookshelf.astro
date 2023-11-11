@@ -1,9 +1,6 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro';
-import BookCard from '../components/BookCard.astro';
-import { books } from '../content/books';
-
-export const prerender = false;
+import BookList from '../components/BookList';
 ---
 
 <DefaultLayout title="Bookshelf">
@@ -13,23 +10,5 @@ export const prerender = false;
     look back on. Maybe one day I will write my thoughts on each but for now,
     enjoy the view.
   </p>
-  <div class="grid gap-10 mx-auto max-w-xl xl:max-w-7xl mt-12">
-    <ul class="grid grid-cols-1 xl:grid-cols-2 gap-8">
-      {
-        books
-          .sort(() => Math.random() - 0.5)
-          .map((book) => (
-            <BookCard
-              title={book.title}
-              author={book.author}
-              year={book.year}
-              img={book.img}
-              loading={book.loading as 'lazy' | 'eager'}
-              link={book.link}
-              reading={book.reading}
-            />
-          ))
-      }
-    </ul>
-  </div>
+  <BookList client:load />
 </DefaultLayout>
