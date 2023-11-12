@@ -4,5 +4,7 @@ import SnakeGame from '../components/SnakeGame';
 ---
 
 <DefaultLayout title="Snake">
-  <div class="space-y-32"><SnakeGame /></div>
+  <div class="space-y-32">
+    <SnakeGame client:only />
+  </div>
 </DefaultLayout>
