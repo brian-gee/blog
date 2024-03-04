@@ -17,6 +17,10 @@ import midnightLibrary from "../content/books/midnight-library.jpg";
 import you from "../content/books/you.jpg";
 import hiddenBodies from "../content/books/hidden-bodies.jpg";
 import navalRavikant from "../content/books/naval-ravikant.jpg";
+import flowersForAlgernon from "../content/books/flowers-for-algernon.jpg";
+import eastOfEden from "../content/books/east-of-eden.jpg";
+import avisitFromTheGoonSquad from "../content/books/a-visit-from-the-goon-squad.jpg";
+import theSirensOfTitan from "../content/books/the-sirens-of-titan.jpg";
 
 type Book = {
   title: string;
@@ -29,6 +33,51 @@ type Book = {
 };
 
 export const books: Book[] = [
+  // {
+  //   title: "",
+  //   author: "",
+  //   img: ,
+  //   year: ,
+  //   reading: false,
+  //   link: "",
+  //   loading: "eager",
+  // },
+  {
+    title: "The Sirens of Titan",
+    author: "Kurt Vonnegut Jr.",
+    img: theSirensOfTitan,
+    year: 1959,
+    reading: false,
+    link: "",
+    loading: "eager",
+  },
+  {
+    title: "A Visit from the Goon Squad",
+    author: "Jennifer Egan",
+    img: avisitFromTheGoonSquad,
+    year: 2010,
+    reading: false,
+    link: "",
+    loading: "eager",
+  },
+  {
+    title: "East of Eden",
+    author: "John Steinbeck",
+    img: eastOfEden,
+    year: 1952,
+    reading: false,
+    link: "",
+    loading: "eager",
+  },
+  {
+    title: "Flowers for Algernon",
+    author: "Daniel Keyes",
+    img: flowersForAlgernon,
+    year: 1966,
+    reading: false,
+    link: "",
+    loading: "eager",
+  },
   {
     title: "The Almanack of Naval Ravikant: A Guide to Wealth and Happiness",
     author: "Eric Jorgenson",
