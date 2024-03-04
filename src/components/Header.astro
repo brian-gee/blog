@@ -1,7 +1,7 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
-import { Icon } from 'astro-icon';
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+import { Icon } from "astro-icon";
 
 type Link = {
   text: string;
@@ -12,47 +12,45 @@ type Link = {
 
 const links: Link[] = [
   {
-    text: 'Articles',
-    href: '/articles',
+    text: "Projects",
+    href: "#projects",
   },
   {
-    text: 'Projects',
-    href: '/projects',
-  },
-  {
-    text: 'About',
-    href: '/about',
+    text: "About",
+    href: "#about",
   },
 ];
 
 const iconLinks: Link[] = [
   {
-    text: 'Bookshelf',
-    name: 'mdi:bookshelf',
-    href: '/bookshelf',
-    target: '_self', // This link has a 'target' property
+    text: "Bookshelf",
+    name: "mdi:bookshelf",
+    href: "#bookshelf",
+    target: "_self", // This link has a 'target' property
   },
   {
-    text: 'Github',
-    name: 'mdi:github-face',
-    href: 'https://github.com/brian-gee',
-    target: '_blank', // This link has a 'target' property
+    text: "Github",
+    name: "mdi:github-face",
+    href: "https://github.com/brian-gee",
+    target: "_blank", // This link has a 'target' property
   },
   {
-    text: 'Email',
-    name: 'mdi:email',
-    href: 'mailto:briangeertsma@gmail.com',
+    text: "Email",
+    name: "mdi:email",
+    href: "mailto:briangeertsma@gmail.com",
   },
 ];
 ---
 
 <header
-  class="flex justify-center w-full p-6"
+  class="flex w-full justify-center p-6"
   x-data="{ open: false }"
-  :class="{ 'pb-32': open }">
-  <div class="max-w-4xl w-full">
+  :class="{ 'pb-32': open }"
+>
+  <div class="w-full max-w-4xl">
     <nav
-      class="relative flex items-center justify-between w-full border-b-[1px] border-blue-300 pb-4 mb-10">
+      class="relative mb-10 flex w-full items-center justify-between border-b-[1px] border-blue-300 pb-4"
+    >
       <a href="/">
         {SITE_TITLE}
       </a>
@@ -60,7 +58,7 @@ const iconLinks: Link[] = [
       <div>
         <!-- Desktop Navigation -->
         <nav class="hidden sm:block">
-          <div class="inline pr-6 space-x-4">
+          <div class="inline space-x-4 pr-6">
             {
               links.map((link) => (
                 <HeaderLink href={link.href}>{link.text}</HeaderLink>
@@ -73,8 +71,9 @@ const iconLinks: Link[] = [
                 <a
                   href={link.href}
                   target={link.target}
-                  rel="noopener noreferrer">
-                  <Icon name={link.name} class="w-6 h-6 inline" />
+                  rel="noopener noreferrer"
+                >
+                  <Icon name={link.name} class="inline h-6 w-6" />
                 </a>
               ))
             }
@@ -84,14 +83,14 @@ const iconLinks: Link[] = [
         <div>
           <Icon
             @click="open = !open"
-            class="h-6 w-6 fill-current sm:hidden hover:cursor-pointer"
+            class="h-6 w-6 fill-current hover:cursor-pointer sm:hidden"
             x-show="!open"
             name="ic:outline-menu"
           />
 
           <Icon
             @click="open = !open"
-            class="h-6 w-6 fill-current sm:hidden hover:cursor-pointer"
+            class="h-6 w-6 fill-current hover:cursor-pointer sm:hidden"
             x-show="open"
             name="ic:outline-close"
           />
@@ -99,28 +98,31 @@ const iconLinks: Link[] = [
           <nav
             x-show="open"
             @click.away="open = false"
-            class="absolute top-full left-0 w-full sm:hidden border-y-[1px] border-blue-300">
-            <div class="pt-5 pb-4 overflow-y-auto">
-              <div class="px-2 space-y-1">
+            class="absolute left-0 top-full w-full border-y-[1px] border-blue-300 sm:hidden"
+          >
+            <div class="overflow-y-auto pb-4 pt-5">
+              <div class="space-y-1 px-2">
                 {
                   links.map((link) => (
                     <HeaderLink
                       @click="open = false"
                       class="block text-center"
                       href={link.href}
-                      target={link.target}>
+                      target={link.target}
+                    >
                       {link.text}
                     </HeaderLink>
                   ))
                 }
-                <div class="flex justify-center pt-2 space-x-2">
+                <div class="flex justify-center space-x-2 pt-2">
                   {
                     iconLinks.map((link) => (
                       <a
                         href={link.href}
                         target={link.target}
-                        rel="noopener noreferrer">
-                        <Icon name={link.name} class="w-6 h-6 inline " />
+                        rel="noopener noreferrer"
+                      >
+                        <Icon name={link.name} class="inline h-6 w-6 " />
                       </a>
                     ))
                   }

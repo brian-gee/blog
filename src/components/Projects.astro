@@ -1,0 +1,39 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+const projects = [
+  {
+    name: "Personal Portfolio",
+    url: "https://github.com/brian-gee/blog",
+    description: "My personal portfolio (the website your on right now)",
+    languages: ["HTML", "TailwindCSS", "TypeScript", "React"],
+    role: "author",
+  },
+  {
+    name: "Astro Trades",
+    url: "https://github.com/brian-gee/astro-trades",
+    description:
+      "A personal day trading tracker built using Astro and Firebase.",
+    languages: ["HTML", "TailwindCSS", "TypeScript", "Firebase"],
+    role: "author",
+  },
+];
+---
+
+<>
+  <h1 class="pb-10 text-center text-4xl sm:pb-20">Projects</h1>
+  <div class="mx-auto mt-12 grid max-w-xl gap-10 xl:max-w-4xl">
+    <ul class="grid grid-cols-1 gap-8 xl:grid-cols-2">
+      {
+        projects.map((project) => (
+          <ProjectCard
+            name={project.name}
+            description={project.description}
+            role={project.role}
+            url={project.url}
+            languages={project.languages}
+          />
+        ))
+      }
+    </ul>
+  </div>
+</>

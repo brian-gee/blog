@@ -1,4 +1,45 @@
-<div class="pt-20 sm:pt-32 grid text-center space-y-4 sm:space-y-8">
-  <h1 class="text-4xl sm:text-7xl">Hi there, I'm Brian</h1>
-  <h3 class="text-3xl sm:text-5xl text-gray-400">I build the web</h3>
+<div class="min-h-screen">
+  <div class="grid space-y-4 pt-20 text-center sm:space-y-8 sm:pt-32">
+    <h1 class="text-4xl sm:text-7xl">Hi there, I'm Brian</h1>
+    <h3 class="text-3xl text-gray-400 sm:text-5xl">I build the web</h3>
+    <!-- Scroll down indicator -->
+    <div class="pt-10 sm:pt-20">
+      <div class="scroll-down mx-auto h-10 w-10 animate-bounce">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="mx-auto h-8 w-8 text-white"
+        >
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </div>
+  </div>
 </div>
+
+<style>
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .scroll-down {
+    animation: bounce 2s infinite;
+  }
+</style>
