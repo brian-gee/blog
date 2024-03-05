@@ -1,7 +1,7 @@
 ---
-title: 'Web Development 101: Creating Your First Webpage with HTML'
-description: 'Building a website might seem like a daunting task, but its easier than you think. Web development is a creative process that allows you to bring your ideas to life on the internet. One of the fundamental languages that every web developer must understand is HTML (HyperText Markup Language). This article will guide you through the basics of HTML and help you create your first webpage.'
-pubDate: 'May 31 2023'
+title: "Web Development 101: Creating Your First Webpage with HTML"
+description: "Building a website might seem like a daunting task, but its easier than you think. Web development is a creative process that allows you to bring your ideas to life on the internet. One of the fundamental languages that every web developer must understand is HTML (HyperText Markup Language). This article will guide you through the basics of HTML and help you create your first webpage."
+pubDate: "May 31 2023"
 ---
 
 Building a website might seem like a daunting task, but it's easier than you think. Web development is a creative process that allows you to bring your ideas to life on the internet. One of the fundamental languages that every web developer must understand is HTML (HyperText Markup Language). This article will guide you through the basics of HTML and help you create your first webpage.
@@ -17,7 +17,7 @@ HTML uses a series of elements, which are used to enclose, or wrap, different pa
 An HTML document consists of several key components. Here is a simple example of an HTML document:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Page Title</title>
