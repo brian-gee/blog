@@ -33,7 +33,7 @@ const BookCard: React.FC<Props> = ({
               <span>{author}</span> <span>&middot;</span>
               <span>{year}</span>
             </p>
-            {reading && <Badge text="reading" color="indigo" />}
+            {/* {reading && <Badge text="reading" color="indigo" />} */}
           </div>
         </div>
       </article>
