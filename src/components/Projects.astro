@@ -1,39 +1,43 @@
 ---
 import ProjectCard from "../components/ProjectCard.astro";
+import sushiSite from "../content/projects/sushi-site.png?url";
 const projects = [
   {
     name: "Personal Portfolio",
-    url: "https://github.com/brian-gee/blog",
-    description: "My personal portfolio (the website your on right now)",
-    languages: ["HTML", "TailwindCSS", "TypeScript", "React"],
-    role: "author",
+    gitUrl: "https://github.com/brian-gee/blog",
+    description: "My personal portfolio (the website you're on right now)",
+    languages: ["HTML", "TailwindCSS", "TypeScript", "React", "Astro"],
+    image: sushiSite,
+    alt: "Astro Trades",
   },
   {
     name: "Astro Trades",
-    url: "https://github.com/brian-gee/astro-trades",
+    gitUrl: "https://github.com/brian-gee/astro-trades",
     description:
       "A personal day trading tracker built using Astro and Firebase.",
-    languages: ["HTML", "TailwindCSS", "TypeScript", "Firebase"],
-    role: "author",
+    languages: ["HTML", "TailwindCSS", "TypeScript", "Firebase", "Astro"],
+    image: sushiSite,
+    alt: "Astro Trades",
   },
 ];
 ---
 
-<>
-  <h1 class="pb-10 text-center text-4xl sm:pb-20">Projects</h1>
-  <div class="mx-auto mt-12 grid max-w-xl gap-10 xl:max-w-4xl">
-    <ul class="grid grid-cols-1 gap-8 xl:grid-cols-2">
+<div class="min-h-screen">
+  <h1 class="text-center text-4xl sm:text-7xl">Projects</h1>
+  <div class="mx-auto mt-32">
+    <ul class="grid grid-cols-1 gap-8">
       {
         projects.map((project) => (
           <ProjectCard
             name={project.name}
             description={project.description}
-            role={project.role}
-            url={project.url}
+            gitUrl={project.gitUrl}
             languages={project.languages}
+            image={project.image}
+            alt={project.alt}
           />
         ))
       }
     </ul>
   </div>
-</>
+</div>

@@ -2,11 +2,14 @@
 import BookList from "../components/BookList";
 ---
 
-<>
-  <p class="pb-5 text-center text-xl sm:pb-10">
-    All the books I read are digital so this is where I keep all my books to
-    look back on. Maybe one day I will write my thoughts on each but for now,
-    enjoy the view.
-  </p>
-  <BookList client:only />
-</>
+<div>
+  <h1 class="text-center text-4xl sm:text-7xl">Books</h1>
+  <div class="mx-auto mt-12 grid gap-10">
+    <p class="text-center text-xl mb-32">
+      All the books I read are digital so this is where I keep my books to look
+      back on. Maybe one day I will write my thoughts on each but for now, enjoy
+      the view.
+    </p>
+    <BookList client:only />
+  </div>
+</div>

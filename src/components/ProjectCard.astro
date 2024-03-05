@@ -1,50 +1,68 @@
 ---
-import Badge from "./Badge";
 import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
 
 interface Props {
   name: string;
-  role: "author" | "contributor" | "maintainer" | string;
-  url: string;
+  gitUrl: string;
   description?: string;
   languages: string[];
+  image: string;
+  alt: string;
 }
 
-const colors = {
-  maintainer: "gradient-pink",
-  author: "gradient-indigo",
-  contributor: "green",
-};
-
-const { name, role, url, description, languages } = Astro.props;
+const { name, gitUrl, description, languages, image, alt } = Astro.props;
 ---
 
-<li class="flex flex-col gap-1 rounded-lg bg-gray-900 p-6 shadow-lg">
-  <div class="flex justify-between">
-    <div class="flex flex-row items-baseline gap-2">
-      <h3 class="text-lg font-medium">{name}</h3>
-      <Badge text={role} color={colors[role]} />
-    </div>
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`Open ${name} repository in a new tab`}
-    >
-      <Icon
-        name="mdi:github"
-        class="w-6 fill-current transition-all hover:scale-110 hover:text-slate-600"
-      />
-    </a>
+<div class="grid gird-cols-1 md:grid-cols-2 mx-auto">
+  <div class="flex">
+    <Image
+      src={image}
+      alt={alt}
+      width={500}
+      height={500}
+      class="object-contain rounded-xl"
+    />
   </div>
-  {description && <p class="leading-relaxed">{description}</p>}
-  <ul class="mt-2 flex flex-wrap gap-2">
-    {
-      languages.map((item) => (
-        <li class="rounded-md bg-gray-300 px-2 py-1 text-sm text-gray-900">
-          {item}
-        </li>
-      ))
-    }
-  </ul>
-</li>
+  <div class="flex justify-end">
+    <li class="flex flex-col gap-1 rounded-lg p-6">
+      <div class="flex justify-end mb-5">
+        <h3 class="text-xl font-medium">{name}</h3>
+      </div>
+      {
+        description && (
+          <p class="leading-relaxed text-end rounded-xl bg-gray-900 py-6 px-4 max-w-sm">
+            {description}
+          </p>
+        )
+      }
+      <ul class="mt-2 flex gap-2 justify-end">
+        {languages.map((item) => <li class="text-sm text-gray-400">{item}</li>)}
+      </ul>
+      <ul class="flex justify-end pt-2 space-x-2">
+        <a
+          href={gitUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open ${name} repository in a new tab`}
+        >
+          <Icon
+            name="mdi:github"
+            class="w-6 fill-current transition-all hover:scale-110 hover:text-slate-600"
+          />
+        </a>
+        <a
+          href={gitUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open ${name} repository in a new tab`}
+        >
+          <Icon
+            name="gridicons:external"
+            class="w-6 fill-current transition-all hover:scale-110 hover:text-slate-600"
+          />
+        </a>
+      </ul>
+    </li>
+  </div>
+</div>
