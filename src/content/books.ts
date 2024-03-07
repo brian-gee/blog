@@ -1,3 +1,10 @@
+import harryPotterAndTheDeathlyHallows from "./books/harryPotterAndTheDeathlyHallows.jpg?url";
+import harryPotterAndTheHalfbloodPrince from "./books/harryPotterAndTheHalfbloodPrince.jpg?url";
+import harryPotterAndTheOrderOfThe from "./books/harryPotterAndTheOrderOfThe.jpg?url";
+import harryPotterAndTheGobletOfFire from "./books/harryPotterAndTheGobletOfFire.jpg?url";
+import harryPotterAndThePrisonerOfAzkaban from "./books/harryPotterAndThePrisonerOfAzkaban.jpg?url";
+import harryPotterAndTheChamberOfSecrets from "./books/harryPotterAndTheChamberOfSecrets.jpg?url";
+import harryPotterAndTheSorcerersStone from "./books/harryPotterAndTheSorcerersStone.jpg?url";
 import miniHabits from "./books/mini-habits.jpg?url";
 import howToWinFriends from "./books/how-to-win-friends.jpg?url";
 import howToBeAnImperfectionist from "./books/imperfectionist.jpg?url";
@@ -33,6 +40,69 @@ type Book = {
 };
 
 export const books: Book[] = [
+  {
+    title: "Harry Potter and the Deathly Hallows",
+    author: "J.K. Rowling",
+    img: harryPotterAndTheDeathlyHallows,
+    year: 2007,
+    reading: false,
+    link: "",
+    loading: "eager",
+  },
+  {
+    title: "Harry Potter and the Half-Blood Prince",
+    author: "J.K. Rowling",
+    img: harryPotterAndTheHalfbloodPrince,
+    year: 2005,
+    reading: false,
+    link: "",
+    loading: "eager",
+  },
+  {
+    title: "Harry Potter and the Order of the Phoenix",
+    author: "J.K. Rowling",
+    img: harryPotterAndTheOrderOfThe,
+    year: 2003,
+    reading: false,
+    link: "",
+    loading: "eager",
+  },
+  {
+    title: "Harry Potter and the Goblet of Fire",
+    author: "J.K. Rowling",
+    img: harryPotterAndTheGobletOfFire,
+    year: 2000,
+    reading: false,
+    link: "",
+    loading: "eager",
+  },
+  {
+    title: "Harry Potter and the Prisoner of Azkaban",
+    author: "J.K. Rowling",
+    img: harryPotterAndThePrisonerOfAzkaban,
+    year: 1999,
+    reading: false,
+    link: "",
+    loading: "eager",
+  },
+  {
+    title: "Harry Potter and the Chamber of Secrets",
+    author: "J.K. Rowling",
+    img: harryPotterAndTheChamberOfSecrets,
+    year: 1998,
+    reading: false,
+    link: "link",
+    loading: "eager",
+  },
+  {
+    title: "Harry Potter and the Sorcerer’s Stone",
+    author: "J.K. Rowling",
+    img: harryPotterAndTheSorcerersStone,
+    year: 1997,
+    reading: false,
+    link: "link",
+    loading: "eager",
+  },
   // {
   //   title: "",
   //   author: "",
