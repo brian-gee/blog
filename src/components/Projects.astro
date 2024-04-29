@@ -1,23 +1,37 @@
 ---
 import ProjectCard from "../components/ProjectCard.astro";
-import sushiSite from "../content/projects/sushi-site.png?url";
+import crm from "../content/projects/next_crm_screen.png?url";
+import blog from "../content/projects/blog_screen.png?url";
+import sushiSite from "../content/projects/sushisite.png?url";
+
 const projects = [
+  {
+    name: "Next CRM",
+    gitUrl: "https://github.com/brian-gee/next-crm",
+    demoUrl: "https://github.com/brian-gee/blog",
+    description: "Crafted with Next.js, React, and TailwindCSS for a sleek interface and robust functionality. Using Clerk for secure authentication and a Node.js, PostgreSQL, Docker backend, honed my full-stack development skills to deliver an efficient business solution.",
+    languages: ["HTML", "TailwindCSS", "TypeScript", "React", "Astro"],
+    image: crm,
+    alt: "Personal portfolio image",
+  },
   {
     name: "Personal Portfolio",
     gitUrl: "https://github.com/brian-gee/blog",
+    demoUrl: "https://briang.xyz",
     description: "My personal portfolio (the website you're on right now)",
     languages: ["HTML", "TailwindCSS", "TypeScript", "React", "Astro"],
-    image: sushiSite,
-    alt: "Astro Trades",
+    image: blog,
+    alt: "Personal portfolio image",
   },
   {
-    name: "Astro Trades",
-    gitUrl: "https://github.com/brian-gee/astro-trades",
+    name: "Sushi Site",
+    gitUrl: "https://github.com/brian-gee/sushi_site",
+    demoUrl: "https://sushii-site.netlify.app/",
     description:
-      "A personal day trading tracker built using Astro and Firebase.",
-    languages: ["HTML", "TailwindCSS", "TypeScript", "Firebase", "Astro"],
+      "A clean, modern, and responsive front end example website.",
+    languages: ["HTML", "CSS", "JavaScript"],
     image: sushiSite,
-    alt: "Astro Trades",
+    alt: "SushiSite",
   },
 ];
 ---
@@ -32,6 +46,7 @@ const projects = [
             name={project.name}
             description={project.description}
             gitUrl={project.gitUrl}
+            demoUrl={project.demoUrl}
             languages={project.languages}
             image={project.image}
             alt={project.alt}

@@ -5,24 +5,27 @@ import { Image } from "astro:assets";
 interface Props {
   name: string;
   gitUrl: string;
+  demoUrl: string;
   description?: string;
   languages: string[];
   image: string;
   alt: string;
 }
 
-const { name, gitUrl, description, languages, image, alt } = Astro.props;
+const { name, gitUrl, demoUrl, description, languages, image, alt } = Astro.props;
 ---
 
 <div class="grid gird-cols-1 md:grid-cols-2 mx-auto">
-  <div class="flex">
-    <Image
-      src={image}
-      alt={alt}
-      width={500}
-      height={500}
-      class="object-contain rounded-xl"
-    />
+  <div class="flex rounded-xl">
+    <div>
+      <Image
+        src={image}
+        alt={alt}
+        width={500}
+        height={500}
+        class="object-contain rounded-xl border-black border-2"
+      />
+    </div>
   </div>
   <div class="flex justify-end">
     <li class="flex flex-col gap-1 rounded-lg p-6">
@@ -52,7 +55,7 @@ const { name, gitUrl, description, languages, image, alt } = Astro.props;
           />
         </a>
         <a
-          href={gitUrl}
+          href={demoUrl}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Open ${name} repository in a new tab`}
